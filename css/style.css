@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #424343; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #424343; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #424343; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #424343; }
+
+ul {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+body {
+  font: 400 16px/30px "Poppins", sans-serif;
+  color: #f8f8f8;
+  background: #041436 url(../images/background.jpg) no-repeat 50% 100%; }
+
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer; }
+
+input {
+  outline: none; }
+
+table {
+  border-collapse: collapse; }
+
+.wrapper {
+  overflow: hidden; }
+
+.container {
+  max-width: 1150px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 32px 72px;
+  background: #0f132d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .header__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+  .header .socials {
+    display: flex;
+    align-items: center;
+    margin-right: 120px; }
+    .header .socials li + li {
+      margin-left: 16px; }
+  .header .icon {
+    display: block;
+    width: 26px;
+    height: 24px;
+    background: url(../images/sprite.png) no-repeat;
+    transition: .3s; }
+    .header .icon.facebook {
+      background-position: 0 0;
+      width: 10px; }
+    .header .icon.twitter {
+      background-position: -28px -1px;
+      width: 20px; }
+    .header .icon.linkedin {
+      background-position: -68px 0px;
+      width: 20px; }
+    .header .icon.instagram {
+      background-position: -105px 0px;
+      width: 22px; }
+    .header .icon.youtube {
+      background-position: -144px 0px;
+      width: 27px; }
+    .header .icon.account {
+      background-position: -292px 2px;
+      position: relative; }
+    .header .icon.search {
+      background-position: -368px 1px;
+      margin-left: 45px; }
+  .header__logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 25px;
+    margin-right: 40px; }
+  .header .account__menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    padding: 31px 0 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: .3s; }
+    .header .account__menu a {
+      display: block;
+      color: #fff;
+      font-size: 20px;
+      padding: 10px 25px;
+      white-space: nowrap;
+      background: #004a89; }
+      .header .account__menu a:first-child {
+        border-radius: 5px 5px 0 0; }
+      .header .account__menu a:last-child {
+        border-radius: 0 0 5px 5px; }
+  .header .account:hover .account__menu {
+    max-height: none; }
+
+.banner {
+  min-height: 100vh;
+  background-size: cover; }
+
+
+/*# sourceMappingURL=style.css.map*/
