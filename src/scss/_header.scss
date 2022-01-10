@@ -1,3 +1,119 @@
 .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 32px 72px;
+    background: #0f132d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    &__navigation {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .socials {
+        display: flex;
+        align-items: center;
+        margin-right: 120px;
+
+        li {
+
+            & + li {
+                margin-left: 16px;
+            }
+        }
+    }
+
+    .icon {
+        display: block;
+        width: 26px;
+        height: 24px;
+        background: url("../images/sprite.png") no-repeat;
+        transition: .3s;
+
+        &.facebook {
+            background-position: 0 0;
+            width: 10px;
+        }
+
+        &.twitter {
+            background-position: -28px -1px;
+            width: 20px;
+        }
+
+        &.linkedin {
+            background-position: -68px 0px;
+            width: 20px;
+        }
+
+        &.instagram {
+            background-position: -105px 0px;
+            width: 22px;
+        }
+
+        &.youtube {
+            background-position: -144px 0px;
+            width: 27px;
+        }
+
+        &.account {
+            background-position: -292px 2px;
+            position: relative;
+        }
+
+        &.search {
+            background-position: -368px 1px;
+            margin-left: 45px;
+        }
+    }
+
+    &__logo {
+        color: $white;
+        font-weight: 700;
+        font-size: 25px;
+        margin-right: 40px;
+    }
+
+    .account {
+
+        &__menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 31px 0 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: .3s;
+
+            a {
+                display: block;
+                color: $white;
+                font-size: 20px;
+                padding: 10px 25px;
+                white-space: nowrap;
+                background: #004a89;
+
+                &:first-child {
+                    border-radius: 5px 5px 0 0;
+                }
+
+                &:last-child {
+                    border-radius: 0 0 5px 5px;
+                }
+            }
+        }
+
+        &:hover {
+
+            .account__menu {
+                max-height: none;
+            }
+        }
+    }
 }

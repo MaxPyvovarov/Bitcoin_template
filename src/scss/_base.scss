@@ -1,9 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #424343;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #424343;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #424343;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #424343;
 }
 
 ul {
@@ -16,13 +29,15 @@ img {
 }
 
 body {
-    font: 400 16px/30px $base-font;
-    color: $font-color;
+    font: 400 16px/30px $poppins;
+    color: $light;
+    background: #041436 url(../images/background.jpg) no-repeat 50% 100%;
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: #000;
+    cursor: pointer;
 }
 
 input {
@@ -38,7 +53,8 @@ table {
 }
 
 .container {
-    max-width: 1630px;
+    max-width: 1150px;
+    min-width: 320px;
     margin: 0 auto;
     padding: 0 15px;
 }
