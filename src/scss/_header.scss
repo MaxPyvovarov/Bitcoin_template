@@ -10,10 +10,20 @@
     align-items: center;
     justify-content: space-between;
 
+    @include screen(576px) {
+        flex-direction: column;
+        padding: 25px 15px;
+    }
+
     &__navigation {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+
+        @include screen(576px) {
+            justify-content: space-between;
+            width: 100%;
+        }
     }
 
     .socials {
@@ -25,6 +35,12 @@
 
             & + li {
                 margin-left: 16px;
+            }
+        }
+
+        &.hide992 {
+            @include screen(992px) {
+                display: none;
             }
         }
     }
@@ -64,11 +80,13 @@
         &.account {
             background-position: -292px 2px;
             position: relative;
+            cursor: pointer;
         }
 
         &.search {
             background-position: -368px 1px;
-            margin-left: 45px;
+            margin-left: 55px;
+            cursor: pointer;
         }
     }
 
@@ -77,6 +95,77 @@
         font-weight: 700;
         font-size: 25px;
         margin-right: 40px;
+
+        @include screen(576px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -500px;
+        display: block;
+        height: 100vh;
+        width: 320px;
+        padding: 80px 30px;
+        z-index: 20;
+        background: #042641;
+        transition: .3s ease;
+
+        &-icon {
+            width: 43px;
+            height: 34px;
+            margin-left: 68px;
+            cursor: pointer;
+        }
+
+        &.active {
+            right: 0;
+        }
+
+        & .cancel-icon {
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            position: absolute;
+            right: 40px;
+            top: 30px;
+        }
+
+        &__mobile {
+            margin-top: 30px;
+
+            li {
+                & + li {
+                    padding-top: 20px;
+                }
+                a {
+                    font-size: 19px;
+                    color: $white;
+                    text-transform: uppercase;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+
+        &__socials {
+            margin-top: 50px;
+            display: none;
+            align-items: center;
+            margin-right: 120px;
+
+        li {
+
+            & + li {
+                margin-left: 16px;
+            }
+        }
+
+            @include screen(992px) {
+                display: flex;
+            }
+        }
     }
 
     .account {

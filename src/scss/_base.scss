@@ -29,9 +29,10 @@ img {
 }
 
 body {
-    font: 400 16px/30px $poppins;
+    font: 400 17px/1 $poppins;
     color: $light;
     background: #041436 url(../images/background.jpg) no-repeat 50% 100%;
+    height: 1600px;
 }
 
 a {
