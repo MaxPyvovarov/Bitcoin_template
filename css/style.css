@@ -54,6 +54,17 @@ table {
   .container--large {
     max-width: 1810px; }
 
+.button {
+  display: block;
+  max-width: 225px;
+  color: #fff;
+  padding: 22px 65px;
+  border: 2px solid #fff;
+  transition: .3s ease; }
+  .button:hover {
+    background: #face34;
+    border: 2px solid #face34; }
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -102,6 +113,11 @@ table {
     margin-right: 120px; }
     .header .socials li + li {
       margin-left: 16px; }
+    .header .socials .icon:hover {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+      -webkit-filter: brightness(0.8);
+              filter: brightness(0.8); }
     @media (max-width: 992px) {
       .header .socials.hide992 {
         display: none; } }
@@ -211,8 +227,30 @@ table {
     max-height: none; }
 
 .home {
-  height: 850px;
-  padding-bottom: 118px; }
+  padding: 200px 118px;
+  height: 850px; }
+
+.about {
+  margin-bottom: 93px; }
+  .about .row {
+    border: 1px dashed #fff;
+    padding: 115px 125px 115px 80px; }
+    .about .row .col-50:first-child {
+      width: calc(60% - 30px);
+      flex-direction: column;
+      margin-right: 5px; }
+      .about .row .col-50:first-child h2 {
+        font-size: 45px;
+        font-weight: 400;
+        margin-bottom: 50px; }
+      .about .row .col-50:first-child p {
+        line-height: 29px;
+        margin-bottom: 80px; }
+    .about .row .col-50:last-child {
+      width: calc(40% - 30px); }
+      .about .row .col-50:last-child img {
+        max-width: 378px;
+        max-height: 307px; }
 
 .promo {
   padding: 95px 0 125px; }
@@ -302,6 +340,8 @@ table {
     display: block;
     width: auto;
     max-width: calc(50% - 20px); }
+    .charts .tabs__item .col-50 img {
+      max-height: 270px; }
 
 .charts__title {
   display: flex;
@@ -317,10 +357,6 @@ table {
 
 .gold-text {
   color: #face34; }
-
-.banner {
-  min-height: 100vh;
-  background-size: cover; }
 
 
 /*# sourceMappingURL=style.css.map*/
