@@ -32,7 +32,6 @@ body {
     font: 400 17px/1 $poppins;
     color: $light;
     background: #041436 url(../images/background.jpg) no-repeat 50% 100%;
-    height: 1600px;
 }
 
 a {
@@ -58,4 +57,33 @@ table {
     min-width: 320px;
     margin: 0 auto;
     padding: 0 15px;
+
+    &--large{
+        @extend .container;
+        max-width: 1810px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+
+    @include screen(768) {
+        flex-direction: column;
+    }
+}
+
+.col-50 {
+    width: 50%;
+    display: flex;
+
+    @include screen(768) {
+        width: 100%;
+    }
+}
+
+.col-25 {
+    width: calc(25% - 21px);
 }
