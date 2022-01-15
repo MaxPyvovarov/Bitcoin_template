@@ -1,4 +1,6 @@
 window.$ = window.jQuery = require('jquery');
+import Swiper, { Autoplay, Navigation } from 'swiper';
+Swiper.use([ Autoplay, Navigation]);
 
 $(document).ready(function () {
     //Mobile menu

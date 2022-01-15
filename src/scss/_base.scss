@@ -64,6 +64,20 @@ table {
     }
 }
 
+.button {
+    display: block;
+    max-width: 225px;
+    color: $white;
+    padding: 22px 65px;
+    border: 2px solid $white;
+    transition: .3s ease;
+
+    &:hover {
+        background: $gold;
+        border: 2px solid $gold;
+    }
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;

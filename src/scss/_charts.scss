@@ -61,6 +61,10 @@
                 display: block;
                 width: auto;
                 max-width: calc(50% - 20px);
+
+                img {
+                    max-height: 270px;
+                }
             }
         }
     }

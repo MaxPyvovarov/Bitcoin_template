@@ -31,10 +31,15 @@
         align-items: center;
         margin-right: 120px;
 
-        li {
+        & li + li {
+            margin-left: 16px;
+        }
 
-            & + li {
-                margin-left: 16px;
+        .icon {
+
+            &:hover {
+                transform: scale(1.2);
+                filter: brightness(.8);
             }
         }
 
