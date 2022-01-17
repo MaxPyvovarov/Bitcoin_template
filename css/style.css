@@ -43,6 +43,10 @@ input {
 table {
   border-collapse: collapse; }
 
+video {
+  width: 100%;
+  height: auto; }
+
 .wrapper {
   overflow: hidden; }
 
@@ -322,14 +326,19 @@ table {
   padding: 25px 0;
   margin: 0 0 36px;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden; }
   .charts .tabs__marquee-item {
     text-align: center;
     width: 18%;
     padding: 0 15px; }
     .charts .tabs__marquee-item div {
+      display: inline-block;
       text-transform: uppercase;
       margin: 0 0 8px; }
+  .charts .tabs__marquee .js-marquee {
+    width: 100%;
+    display: flex; }
 
 .charts .tabs__item {
   display: none;
@@ -357,6 +366,18 @@ table {
 
 .gold-text {
   color: #face34; }
+
+.video__container {
+  position: relative; }
+
+.video__play {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  left: calc(50% - 30px);
+  top: calc(50% - 30px); }
 
 
 /*# sourceMappingURL=style.css.map*/
