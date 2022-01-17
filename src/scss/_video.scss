@@ -1,0 +1,16 @@
+.video {
+
+    &__container {
+        position: relative;
+    }
+
+    &__play {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: $white;
+        left: calc(50% - 30px);
+        top: calc(50% - 30px);
+    }
+}
