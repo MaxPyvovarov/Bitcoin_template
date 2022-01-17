@@ -5,6 +5,15 @@
         border: 1px dashed $white;
         padding: 115px 125px 115px 80px;
 
+        @include screen(992px) {
+            flex-direction: column-reverse;
+            padding: 85px 95px 85px 70px;
+        }
+
+        @include screen(576px) {
+            padding: 55px 35px 50px 35px;
+        }
+
         .col-50 {
 
             &:first-child {
@@ -12,9 +21,13 @@
                 flex-direction: column;
                 margin-right: 5px;
 
+                @include screen(992px) {
+                    padding-top: 30px;
+                    width: 90%;
+                }
+
                 h2 {
-                    font-size: 45px;
-                    font-weight: 400;
+                    text-align: left;
                     margin-bottom: 50px;
                 }
 
@@ -30,6 +43,14 @@
                 img {
                     max-width: 378px;
                     max-height: 307px;
+
+                    @include screen(470px) {
+                        max-width: 300px;
+                    }
+
+                    @include screen(380px) {
+                        max-width: 245px;
+                    }
                 }
             }
         }

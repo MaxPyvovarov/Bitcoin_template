@@ -99,7 +99,7 @@ const config = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-              { from: "src/images/video", to: "images/video" },
+              { from: "src/video", to: "video" },
             ],
           }),
     ]
