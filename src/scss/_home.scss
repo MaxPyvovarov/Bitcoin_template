@@ -1,4 +1,113 @@
 .home {
-    padding: 200px 118px;
-    height: 850px;
+    padding: 200px 118px 150px;
+    min-height: 100vh;
+
+    &__swiper {
+
+        padding-bottom: 110px;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        
+        &-slide {
+            padding: 25px 0;
+
+            &Title {
+                font-size: 55px;
+                font-weight: 700;
+                line-height: 65px;
+                margin-bottom: 50px;
+            }
+
+            &Text {
+                font-size: 18px;
+                line-height: 30px;
+                margin-bottom: 75px;
+            }
+
+            &Buttons {
+                display: flex;
+                justify-content: space-between;
+
+                .button {
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding: 22px 40px;
+
+                    &:last-child {
+                        background: $gold;
+                        border: 2px solid $gold;
+
+                        &:hover {
+                            background: transparent;
+                            border: 2px solid $white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .row {
+
+            justify-content: flex-start;
+
+            .col-50 {
+                flex-direction: column;
+
+                &:last-child {
+                    max-width: 540px;
+                }
+
+                &__image {
+                    justify-content: center;
+                    align-items: center;
+                    background: rgb(1,187,246);
+                    background: radial-gradient(circle, rgba(1,187,246,0.7) 0%, rgba(4,31,132,0.6) 35%, rgba(4,19,52,0.3) 50%, rgba(4,19,52,0) 70%);
+                    margin-right: 30px;
+
+                    img {
+                        max-height: 555px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .swiper {
+
+        &-button-prev,
+        &-button-next {
+
+            width: 62px;
+            height: 62px;
+            top: 91%;
+            border: 3px solid $white;
+            border-radius: 50%;
+            transition: .3s ease;
+
+            &:after {
+                font-size: 18px;
+                font-weight: 600;
+                color: $white;
+                transition: .5s;
+            }
+
+            &:hover {
+                border-color: $whiteHalf;
+                
+                &:after {
+                    color: $whiteHalf;
+                }
+            }
+        }
+
+        &-button-prev {
+            left: calc(50% - 70px);
+        }
+
+        &-button-next {
+            right: calc(50% - 70px);
+        }
+    }
 }

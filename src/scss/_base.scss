@@ -70,10 +70,13 @@ video {
 }
 
 .button {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 225px;
+    width: 100%;
     color: $white;
-    padding: 22px 65px;
+    padding: 22px 60px;
     border: 2px solid $white;
     transition: .3s ease;
     text-align: center;

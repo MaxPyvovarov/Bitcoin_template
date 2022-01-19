@@ -25,6 +25,20 @@ $(document).ready(function () {
         }
     });
 
+    const swiper = new Swiper('.home__swiper', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoHeight: 'true',
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
     const marqueeInitialization = () => {
         $('.tabs__marquee').marquee({
             duration: 8000,
