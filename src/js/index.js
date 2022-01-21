@@ -1,7 +1,7 @@
 window.$ = window.jQuery = require('jquery');
 import  'jquery.marquee';
-import Swiper, { Autoplay, Navigation } from 'swiper';
-Swiper.use([ Autoplay, Navigation]);
+import Swiper, { Autoplay, Navigation, Pagination } from 'swiper';
+Swiper.use([ Autoplay, Navigation, Pagination]);
 
 $(document).ready(function () {
     //Mobile menu
@@ -31,7 +31,7 @@ $(document).ready(function () {
             delay: 5000,
         },
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 30,
         autoHeight: 'true',
         navigation: {
             nextEl: '.swiper-button-next',
@@ -42,7 +42,7 @@ $(document).ready(function () {
     const marqueeInitialization = () => {
         $('.tabs__marquee').marquee({
             duration: 8000,
-            pauseOnHover: false,
+            pauseOnHover: true,
             gap: 30,
           });
     }
