@@ -24,6 +24,11 @@
                 height: 24px;
                 background: $gold;
                 opacity: 1;
+                transition: .3s ease;
+
+                &:hover {
+                    filter: brightness(.7);
+                }
 
                 &-active {
                     background: $white;
@@ -84,8 +89,14 @@
             align-items: center;
 
             a {
+                transition: .3s ease;
+
                 &:first-child {
                     font-weight: 600;
+                }
+
+                &:hover {
+                    filter: brightness(.7);
                 }
             }
     
