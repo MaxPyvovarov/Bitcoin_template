@@ -1,0 +1,139 @@
+.footer {
+
+    &__container {
+        margin: 0 0 80px;
+    }
+
+    h2 {
+        font-size: 51px;
+        text-align: left;
+        margin: 0 0 82px;
+        font-weight: 700;
+
+        @include screen(768px) {
+            margin-bottom: 42px;
+        }
+    }
+
+    .title-25 {
+        position: relative;
+        display: inline-block;
+
+        &:after {
+            content: '';
+            height: 6px;
+            width: 0;
+            background: $gold;
+            position: absolute;
+            left: 0;
+            top: calc(100% + 10px);
+            transition: .4s ease-out;
+        }
+    }
+
+    .row {
+        @include screen(768px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .col-25 {
+
+        @include screen(768px) {
+            width: calc(50% - 30px);
+            padding: 15px 0;
+        }
+
+        @include screen(620px) {
+            width: 100%;
+        }
+
+        &:hover {
+            .title-25 {
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+
+        a {
+            transition: .3s ease;
+
+            &:hover {
+                color: $white;
+                text-decoration: underline;
+                text-decoration-color: $gold;
+            }
+        }
+
+        div, a, ul {
+            color: rgba(255, 255, 255, .5);
+        }
+
+        li, a, div {
+            display: block;
+            padding: 7px 0;
+
+            a {
+                padding: 0;
+            }
+        }
+    }
+
+    .footer__contacts {
+
+        li {
+            position: relative;
+            padding-left: 25px;
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                max-width: 16px;
+            }
+        }
+    }
+
+    &__newsletter {
+        
+        input {
+            border: 2px solid $white;
+            border-radius: 0;
+            height: 55px;
+            background: transparent;
+            padding: 15px 18px;
+            color: rgba(255, 255, 255, .5);
+            display: inline-block;
+            width: 100%;
+            font-size: 17px;
+            line-height: 1;
+
+            &[type='submit'] {
+                width: auto;
+                padding: 10px 40px;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: .3s ease;
+
+                &:hover {
+                    background: $gold;
+                    border: 2px solid $gold;
+                    color: $white;
+                }
+            }
+
+            & + input {
+                margin-top: 18px;
+            }
+        }
+    }
+
+    &__copyright {
+        color: $whiteHalf;
+        text-align: center;
+        padding: 36px 0;
+        border-top: 1px solid rgba(255, 255, 255, .35);
+    }
+}

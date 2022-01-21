@@ -86,6 +86,6 @@ $(document).ready(function () {
         if (video.paused)
             video.play();
         else
-            video.pause();
+            video.pause()
     })
 });
