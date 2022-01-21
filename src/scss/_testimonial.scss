@@ -1,0 +1,130 @@
+.testimonial {
+    padding: 200px 0 0;
+
+    .container--large {
+        max-width: 1300px;
+    }
+
+    &__swiper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-bottom: 40px;
+
+        .swiper-pagination {
+            bottom: 0;
+            left: 40%;
+
+            @include screen(600px) {
+                left: 0;
+            }
+
+            &-bullet {
+                width: 24px;
+                height: 24px;
+                background: $gold;
+                opacity: 1;
+
+                &-active {
+                    background: $white;
+                }
+            }
+        }
+    }
+
+    &__content {
+        padding: 75px 65px 40px;
+        border: 1px solid rgba(255, 255, 255, .63);
+
+        .title-45 {
+            margin-bottom: 70px;
+        }
+
+        @include screen(400px) {
+            padding: 40px 30px 30px;
+
+            .title-45 {
+                font-size: 41px;
+            }
+        }
+    }
+
+    &__slide {
+        display: flex;
+
+        @include screen(1200px) {
+            flex-direction: column;   
+        }
+    }
+
+    &__photo {
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+
+        @include screen(1200px) {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        @include screen(576px) {
+            flex-direction: column;
+            margin: 0 0 30px;
+        }
+
+        img {
+            max-width: 194px;
+            margin-bottom: 20px;
+        }
+
+        &--caption {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                &:first-child {
+                    font-weight: 600;
+                }
+            }
+    
+            .gold-text {
+                margin: 5px 0 20px;
+            }
+    
+            p {
+                font-size: 75px;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 700;
+            }
+
+            @include screen(1200px) {
+                align-items: flex-start;
+                margin-left: 15px;
+            }
+
+            @include screen (576px) {
+                flex-direction: row;
+                align-items: center;
+                margin-left: 0;
+
+                .gold-text {
+                    margin: 0 15px;
+                }
+
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__text {
+
+        p {
+            line-height: 31px;
+            margin-bottom: 15px;
+        }
+    }
+}

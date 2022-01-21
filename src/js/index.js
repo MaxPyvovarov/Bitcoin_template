@@ -25,7 +25,9 @@ $(document).ready(function () {
         }
     });
 
-    const swiper = new Swiper('.home__swiper', {
+
+    //Home swiper
+    const home_swiper = new Swiper('.home__swiper', {
         loop: true,
         autoplay: {
             delay: 5000,
@@ -38,6 +40,25 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
     });
+
+
+    //Testimonial swiper
+    const testimonial_swiper = new Swiper('.testimonial__swiper', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+        slidesPerView: 1,
+        spaceBetween: 500,
+        autoHeight: 'true',
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+            autoheight: true
+        },
+    });
+
 
     const marqueeInitialization = () => {
         $('.tabs__marquee').marquee({
