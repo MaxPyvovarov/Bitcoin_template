@@ -4,6 +4,15 @@ import Swiper, { Autoplay, Navigation, Pagination } from 'swiper';
 Swiper.use([ Autoplay, Navigation, Pagination]);
 
 $(document).ready(function () {
+    //Search
+    let search = document.querySelector(".search")
+    let btn = document.querySelector(".search-button")
+    let input = document.querySelector(".input")
+
+    btn.addEventListener('click',()=>{
+        search.classList.toggle('active');
+        input.focus()
+    });
     //Mobile menu
     $('.menu-icon').on('click', function() {
         $('.menu').addClass('active');

@@ -3,7 +3,11 @@
     min-height: 100vh;
 
     @include screen(768px) {
-        padding: 160px 65px 100px;
+        padding: 140px 65px 80px;
+    }
+
+    @include screen(576px) {
+        padding: 160px 15px 100px;
     }
 
     &__swiper {
@@ -102,8 +106,8 @@
                     max-width: 540px;
 
                     @include screen(1380px) {
-                        width: 90%;
-                        max-width: 90%;
+                        width: 100%;
+                        max-width: 100%;
                     }
                 }
 
