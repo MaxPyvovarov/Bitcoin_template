@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: $whiteHalf;
 }

@@ -1,29 +1,105 @@
-  
 .video {
+	padding: 95px 0 190px;
 
-    padding: 95px 0 190px;
+	h2 {
+		margin-bottom: 92px;
+	}
 
-    h2 {
-        margin-bottom: 92px;
-    }
+	&__container {
+		position: relative;
+		background: $black;
+		width: 100%;
+		border-radius: 5px;
+		overflow: hidden;
+		line-height: 0;
 
-    &__container {
-        position: relative;
-    }
+		#videoplayer {
+			width: 100%;
+			height: 100%;
+		}
+	}
 
-    &__play {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        z-index: 5;
-        cursor: pointer;
+	&__play {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 9;
+		transition: 0.3s;
 
-        &.paused {
-            background: url("../images/video.jpg") no-repeat 50% 50%;
-            background-size: cover;
-        }
-    }
+		&-button {
+			position: absolute;
+			width: 90px;
+			height: 90px;
+			left: calc(50% - 45px);
+			top: calc(50% - 45px);
+			z-index: 12;
+			border: 1px solid $white;
+			border-radius: 50%;
+			background: $white;
+			cursor: pointer;
+			transition: 0.3s;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+
+			@include screen(768) {
+				width: 68px;
+				height: 68px;
+				left: calc(50% - 34px);
+				top: calc(50% - 34px);
+			}
+
+			img {
+				width: 45px;
+
+				@include screen(768) {
+					width: 30px;
+				}
+			}
+
+			.icon2 {
+				display: none;
+				padding-left: 5px;
+			}
+
+			&:hover {
+				background: #0f132d;
+				border-color: #0f132d;
+				box-shadow: 0 0 35px 5px rgba(250, 206, 52, 0.5),
+					0 0 35px 10px rgba(250, 206, 52, 0.25);
+
+				img {
+					filter: invert(1);
+				}
+			}
+		}
+
+		&:hover {
+			.video-button {
+				opacity: 1;
+			}
+		}
+
+		&.paused {
+			background: url('../images/video.jpg') no-repeat 50% 50%;
+			background-size: cover;
+			box-shadow: inset 0 0 0 200vw rgba(255, 255, 255, 0.5);
+			transition: none;
+
+			.video-button {
+				opacity: 1;
+			}
+
+			.icon1 {
+				display: none;
+			}
+
+			.icon2 {
+				display: block;
+			}
+		}
+	}
 }

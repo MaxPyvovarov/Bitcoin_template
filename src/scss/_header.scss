@@ -1,280 +1,274 @@
 .header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 20;
-    padding: 32px 72px;
-    background: #0f132d;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 20;
+	padding: 32px 72px;
+	background: #0f132d;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
-    @include screen(576px) {
-        flex-direction: column;
-        padding: 25px 15px;
-    }
+	@include screen(576px) {
+		flex-direction: column;
+		padding: 25px 15px;
+	}
 
-    &__navigation {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+	&__navigation {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
 
-        @include screen(576px) {
-            justify-content: space-between;
-            width: 100%;
-        }
-    }
+		@include screen(576px) {
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
 
-    .socials {
-        display: flex;
-        align-items: center;
-        margin-right: 120px;
+	.socials {
+		display: flex;
+		align-items: center;
+		margin-right: 120px;
 
-        & li + li {
-            margin-left: 16px;
-        }
+		& li + li {
+			margin-left: 16px;
+		}
 
-        .icon {
+		.icon {
+			&:hover {
+				transform: scale(1.2);
+				filter: brightness(0.8);
+			}
+		}
 
-            &:hover {
-                transform: scale(1.2);
-                filter: brightness(.8);
-            }
-        }
+		&.hide992 {
+			@include screen(992px) {
+				display: none;
+			}
+		}
+	}
 
-        &.hide992 {
-            @include screen(992px) {
-                display: none;
-            }
-        }
-    }
+	.icon {
+		display: block;
+		width: 26px;
+		height: 24px;
+		background: url('../images/sprite.png') no-repeat;
+		transition: 0.3s;
 
-    .icon {
-        display: block;
-        width: 26px;
-        height: 24px;
-        background: url("../images/sprite.png") no-repeat;
-        transition: .3s;
+		&.facebook {
+			background-position: 0 0;
+			width: 10px;
+		}
 
-        &.facebook {
-            background-position: 0 0;
-            width: 10px;
-        }
+		&.twitter {
+			background-position: -28px -1px;
+			width: 20px;
+		}
 
-        &.twitter {
-            background-position: -28px -1px;
-            width: 20px;
-        }
+		&.linkedin {
+			background-position: -68px 0px;
+			width: 20px;
+		}
 
-        &.linkedin {
-            background-position: -68px 0px;
-            width: 20px;
-        }
+		&.instagram {
+			background-position: -105px 0px;
+			width: 22px;
+		}
 
-        &.instagram {
-            background-position: -105px 0px;
-            width: 22px;
-        }
+		&.youtube {
+			background-position: -144px 0px;
+			width: 27px;
+		}
 
-        &.youtube {
-            background-position: -144px 0px;
-            width: 27px;
-        }
+		&.account {
+			background-position: -292px 2px;
+			position: relative;
+			cursor: pointer;
+		}
+	}
 
-        &.account {
-            background-position: -292px 2px;
-            position: relative;
-            cursor: pointer;
-        }
-    }
+	&__logo {
+		color: $white;
+		font-weight: 700;
+		font-size: 25px;
+		margin-right: 40px;
 
-    &__logo {
-        color: $white;
-        font-weight: 700;
-        font-size: 25px;
-        margin-right: 40px;
+		@include screen(576px) {
+			margin-bottom: 30px;
+		}
+	}
 
-        @include screen(576px) {
-            margin-bottom: 30px;
-        }
-    }
+	.menu {
+		position: fixed;
+		top: 0;
+		right: -500px;
+		display: block;
+		height: 100vh;
+		width: 320px;
+		padding: 80px 30px;
+		z-index: 20;
+		background: #042641;
+		transition: 0.3s ease;
 
-    .menu {
-        position: fixed;
-        top: 0;
-        right: -500px;
-        display: block;
-        height: 100vh;
-        width: 320px;
-        padding: 80px 30px;
-        z-index: 20;
-        background: #042641;
-        transition: .3s ease;
+		&-icon {
+			width: 43px;
+			height: 34px;
+			margin-left: 68px;
+			cursor: pointer;
+		}
 
-        &-icon {
-            width: 43px;
-            height: 34px;
-            margin-left: 68px;
-            cursor: pointer;
-        }
+		&.active {
+			right: 0;
+		}
 
-        &.active {
-            right: 0;
-        }
+		& .cancel-icon {
+			width: 36px;
+			height: 36px;
+			cursor: pointer;
+			position: absolute;
+			right: 40px;
+			top: 30px;
+		}
 
-        & .cancel-icon {
-            width: 36px;
-            height: 36px;
-            cursor: pointer;
-            position: absolute;
-            right: 40px;
-            top: 30px;
-        }
+		&__mobile {
+			margin-top: 30px;
 
-        &__mobile {
-            margin-top: 30px;
+			li {
+				& + li {
+					padding-top: 20px;
+				}
+				a {
+					font-size: 19px;
+					color: $white;
+					text-transform: uppercase;
+					padding-bottom: 10px;
+				}
+			}
+		}
 
-            li {
-                & + li {
-                    padding-top: 20px;
-                }
-                a {
-                    font-size: 19px;
-                    color: $white;
-                    text-transform: uppercase;
-                    padding-bottom: 10px;
-                }
-            }
-        }
+		&__socials {
+			margin-top: 50px;
+			display: none;
+			align-items: center;
+			margin-right: 120px;
 
-        &__socials {
-            margin-top: 50px;
-            display: none;
-            align-items: center;
-            margin-right: 120px;
+			li {
+				& + li {
+					margin-left: 16px;
+				}
+			}
 
-        li {
+			@include screen(992px) {
+				display: flex;
+			}
+		}
+	}
 
-            & + li {
-                margin-left: 16px;
-            }
-        }
+	.account {
+		&__menu {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 0;
+			transform: translateX(-50%);
+			padding: 15px 0 0;
+			overflow: hidden;
+			transition: 0.3s;
 
-            @include screen(992px) {
-                display: flex;
-            }
-        }
-    }
+			@include screen(576px) {
+				left: 100%;
+			}
 
-    .account {
+			a {
+				display: block;
+				color: $white;
+				font-size: 20px;
+				padding: 10px 20px;
+				white-space: nowrap;
+				background: #004a89;
 
-        &__menu {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 31px 0 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: .3s;
+				&:first-child {
+					border-radius: 5px 5px 0 0;
+				}
 
-            @include screen(576px) {
-                left: 100%;
-            }
+				&:last-child {
+					border-radius: 0 0 5px 5px;
+				}
+			}
+		}
 
-            a {
-                display: block;
-                color: $white;
-                font-size: 20px;
-                padding: 10px 25px;
-                white-space: nowrap;
-                background: #004a89;
+		&:hover {
+			.account__menu {
+				height: 100px;
+			}
+		}
+	}
 
-                &:first-child {
-                    border-radius: 5px 5px 0 0;
-                }
+	.search {
+		display: flex;
+		align-items: center;
+		position: relative;
+		margin-left: 45px;
 
-                &:last-child {
-                    border-radius: 0 0 5px 5px;
-                }
-            }
-        }
+		.input {
+			margin: 0;
+			border: none;
+			width: 30px;
+			padding: 10px;
+			transition: width 0.3s ease;
+			border-radius: 15px;
+			background: #0f132d;
+		}
 
-        &:hover {
+		.search-button {
+			position: absolute;
+			height: 30px;
+			left: 0;
+			border: none;
+			background: #0f132d;
+			cursor: pointer;
+			border-radius: 15px;
+			transition: transform 0.3s ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 0;
 
-            .account__menu {
-                max-height: none;
-            }
-        }
-    }
+			img {
+				background: none;
+			}
+		}
 
-    .search {
-        display: flex;
-        align-items: center;
-        position: relative;
-        margin-left: 45px;
+		.input,
+		.search-button {
+			&:focus {
+				outline: none;
+			}
+		}
 
-        .input {
-            margin: 0;
-            border: none;
-            width: 30px;
-            padding: 10px;
-            transition: width .3s ease;
-            border-radius: 15px;
-            background: #0f132d;
-        }
+		&.active {
+			.input {
+				width: 250px;
+				background: $white;
 
-        .search-button {
-            position: absolute;
-            height: 30px;
-            left: 0;
-            border: none;
-            background: #0f132d;
-            cursor: pointer;
-            border-radius: 15px;
-            transition: transform .3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 0;
+				@include screen(768px) {
+					width: 150px;
+				}
+			}
 
-            img {
-                background: none;
-            }
-        }
+			.search-button {
+				transform: translateX(220px);
+				background: $white;
 
-        .input,
-        .search-button {
+				@include screen(768px) {
+					transform: translateX(120px);
+				}
 
-            &:focus {
-                outline: none;
-            }
-        }
-
-        &.active {
-
-            .input {
-                width: 250px;
-                background: $white;
-
-                @include screen(768px) {
-                    width: 150px;
-                }
-            }
-
-            .search-button {
-                transform: translateX(220px);
-                background: $white;
-
-                @include screen(768px) {
-                    transform: translateX(120px);
-                }
-
-                img {
-                    filter: invert(.7);
-                }
-            }
-        }
-    }
+				img {
+					filter: invert(0.7);
+				}
+			}
+		}
+	}
 }
